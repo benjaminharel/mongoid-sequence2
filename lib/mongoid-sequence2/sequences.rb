@@ -1,7 +1,7 @@
 module Mongoid
   class Sequences
     include Mongoid::Document
-    store_in session: "#{Mongoid::Sequence2.session}",
+    store_in client: "#{Mongoid::Sequence2.session}",
              collection: "#{Mongoid::Sequence2.collection_name}"
 
     field :fieldname
